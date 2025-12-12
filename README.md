@@ -126,6 +126,6 @@ GitHub
 Proyecto de uso académico y educativo.
 
 ```bash
-git clone https://github.com/JorgeBallestas/Api-Gestor_Tareas.git
+(https://github.com/JorgeBallestas/Api-Gestor_Tareas.git)
 
 
