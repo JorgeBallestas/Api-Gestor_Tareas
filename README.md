@@ -1,52 +1,57 @@
-# Api-Gestor_Tareas
+# 📇 API Gestor de Tareas
 
-API REST para la **gestión de tareas**, desarrollada con **Laravel 10** y **PHP 8.x**. Permite crear, leer, actualizar y eliminar tareas de manera sencilla y segura. Ideal para aplicaciones de productividad o administración de tareas.
-
----
-
-## 📌 Características
-
-- CRUD completo de tareas (Create, Read, Update, Delete)
-- Autenticación de usuarios (opcional según configuración)
-- Documentación de API incluida
-- Estructura modular y escalable
-- Tests unitarios y funcionales incluidos
+API REST desarrollada en **Laravel 10** para la gestión de tareas personales con endpoints CRUD completos.
 
 ---
 
-## 🛠 Requisitos
+## 🚀 Características
 
-- PHP >= 8.1
-- Composer
-- MySQL o base de datos compatible
-- Node.js y npm (para assets si aplica)
-- Laravel 10
+- **Gestión completa de tareas:** Crear, Leer, Actualizar y Eliminar tareas  
+- **Validaciones robustas:** Prevención de errores y validación de datos requeridos  
+- **Asignación de estados:** Las tareas pueden tener estados como pendiente, en progreso o completada  
+- **Búsqueda y filtrado:** Buscar tareas por título, descripción o estado  
+- **Respuestas consistentes:** Formato JSON estandarizado para todas las respuestas  
+- **Paginación:** Listados paginados para mejor rendimiento  
+- **Tests automatizados:** Cobertura de funcionalidades con PHPUnit  
 
 ---
 
-## ⚡ Instalación
+## 🛠️ Tecnologías Utilizadas
+
+- **Laravel 10:** Framework PHP principal  
+- **MySQL:** Base de datos relacional  
+- **PHPUnit:** Framework de testing  
+- **Eloquent ORM:** Manejo de base de datos  
+
+---
+
+## 📋 Requisitos
+
+- PHP 8.1 o superior  
+- Composer  
+- MySQL 5.7 o superior  
+- Laravel 10.x  
+
+---
+
+## ⚡ Instalación Rápida
 
 1. **Clonar el repositorio**
 
 ```bash
 git clone https://github.com/JorgeBallestas/Api-Gestor_Tareas.git
 cd Api-Gestor_Tareas
-Instalar dependencias de PHP
+Instalar dependencias
 
 bash
 Copiar código
 composer install
-Instalar dependencias de Node.js (si aplica)
-
-bash
-Copiar código
-npm install
-npm run build
-Configurar variables de entorno
+Configurar entorno
 
 bash
 Copiar código
 cp .env.example .env
+php artisan key:generate
 Editar .env y configurar la base de datos:
 
 ini
@@ -57,38 +62,25 @@ DB_PORT=3306
 DB_DATABASE=nombre_db
 DB_USERNAME=usuario
 DB_PASSWORD=contraseña
-Generar clave de aplicación
-
-bash
-Copiar código
-php artisan key:generate
-Migrar la base de datos
+Ejecutar migraciones
 
 bash
 Copiar código
 php artisan migrate
-php artisan db:seed  # Opcional, si hay seeders
-Ejecutar la aplicación
+Cargar datos de prueba (opcional)
+
+bash
+Copiar código
+php artisan db:seed
+Iniciar servidor
 
 bash
 Copiar código
 php artisan serve
 La API estará disponible en http://127.0.0.1:8000.
 
-📂 Estructura del proyecto
-app/ → Controladores, modelos y lógica de negocio
+📖 Documentación de Endpoints
 
-routes/ → Definición de rutas (api.php y web.php)
-
-database/ → Migraciones, seeders y factories
-
-resources/ → Vistas y recursos (si aplica)
-
-tests/ → Tests unitarios y funcionales
-
-public/ → Document root (index.php, assets)
-
-🔗 Endpoints principales
 Tareas
 Método	Ruta	Descripción
 GET	/api/tasks	Listar todas las tareas
@@ -97,29 +89,36 @@ POST	/api/tasks	Crear una nueva tarea
 PUT	/api/tasks/{id}	Actualizar una tarea
 DELETE	/api/tasks/{id}	Eliminar una tarea
 
-(Ver API_DOCUMENTATION.md para más detalles de cada endpoint)
+(Consulta API_DOCUMENTATION.md para más detalles de cada endpoint y ejemplos de uso)
 
-🧪 Tests
-Ejecutar tests unitarios y funcionales con:
+🧪 Testing
+Ejecutar tests automatizados con:
 
 bash
 Copiar código
 php artisan test
-📚 Recursos adicionales
-Documentación oficial Laravel
 
-Documentación completa de la API
+💾 Datos de Prueba
+Puedes agregar tareas de prueba usando seeders o manualmente en la base de datos.
 
-📝 Notas
-Asegúrate de tener las extensiones de PHP necesarias: pdo, mbstring, openssl, tokenizer, json
+🔒 Validaciones Implementadas
+Cada tarea debe tener título obligatorio
 
-Los endpoints utilizan formato JSON para requests y responses
+Validación de longitud de campos
 
-Puedes extender la API con autenticación, roles de usuario o integración con frontend
+Estado de la tarea solo puede ser: pendiente, en progreso o completada
 
 👤 Autor
 Jorge Ballestas
 GitHub
+
+css
+Copiar código
+
+Si quieres, puedo hacer **una versión aún más profesional con badges de estado, build y cobertura de tests**, como los que se usan en GitHub para proyectos open-source, que queda lista para mostrar a cualquier persona que vea tu repo.  
+
+¿Quieres que haga esa versión también?
+
 
 📄 Licencia
 
